@@ -18,7 +18,7 @@ const ModalFullscreen = ({
 }) => {
   return (
     <div className="bg-black/50 w-screen h-screen absolute top-0 left-0 backdrop-blur-sm flex   justify-center items-center z-50 ">
-      <div className="w-1/2 md:w-1/3 min-h-60 bg-red-500/50 p-4 pt-12 rounded-xl border border-red-500 relative shadow-2xl shadow-red-500">
+      <div className="w-3/4 md:w-1/3 min-h-72 bg-red-500/50 p-4 pt-12 rounded-xl border border-red-500 relative shadow-2xl shadow-red-500">
         <div className="absolute top-2 right-0 px-4 py-2 text-white flex items-center space-x-2">
           <small className="animate-move-left-right flex items-center space-x-1">
             <span>Tap to fullscreen</span>
