@@ -46,7 +46,7 @@ const Cursor = () => {
         transform: 'translate(-50%, -50%)', // Center the cursor
         transition: 'transform 0.1s ease-out', // Smooth transition
       }}
-      className='size-10 border-2 border-red-500 rounded-full z-[100] flex justify-center items-center pointer-events-none'
+      className='size-10 border-2 border-red-500 rounded-full z-[100] justify-center items-center pointer-events-none hidden lg:flex'
     >
       <div className='size-2 rounded-full bg-red-500'></div>
     </div>

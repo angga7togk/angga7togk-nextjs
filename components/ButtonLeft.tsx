@@ -18,7 +18,8 @@ const ButtonLeft: React.FC<Props> = ({ title, subtitle, icon, onClick }) => {
       onMouseLeave={() => {
         setHover(false);
       }}
-      className={`w-1/2 flex items-center space-x-4 lg:space-x-6  text-start transition duration-300 ${hover && "translate-x-5"}`}
+      onClick={onClick}
+      className={`w-1/2 flex items-center space-x-4 lg:space-x-6  text-start transition duration-300 hover:translate-x-5 hover:bg-gradient-to-l from-red-500/50 to-transparent`}
     >
       <div className="relative">
         <div
@@ -36,7 +37,9 @@ const ButtonLeft: React.FC<Props> = ({ title, subtitle, icon, onClick }) => {
         </div>
       </div>
       <div>
-        <div className="font-semibold text-base lg:text-xl p-0 translate-y-1">{title}</div>
+        <div className="font-semibold text-base lg:text-xl p-0 translate-y-1">
+          {title}
+        </div>
         <div className="text-[10px] lg:text-base text-gray-200">{subtitle}</div>
       </div>
     </button>
