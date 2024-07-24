@@ -13,7 +13,7 @@ const ProfileCard = () => {
       onMouseLeave={() => {
         setHover(false);
       }}
-      className="flex items-center space-x-2 lg:space-x-4"
+      className="flex items-center space-x-2 lg:space-x-4 text-start"
     >
       <img
         src="/img/profile.jpg"
