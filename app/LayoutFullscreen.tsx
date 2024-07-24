@@ -6,11 +6,13 @@ import ModalFullscreen from "@/components/ModalFullscreen";
 import { PropsWithChildren, useEffect, useRef, useState } from "react";
 
 interface Props {
-  onLoadChange: (isLoaded: boolean) => void;
+  onLoadChange?: (isLoaded: boolean) => void;
+  wallpaper?: string
 }
 
 const LayoutFullscreen = ({
   children,
+  wallpaper,
   onLoadChange,
 }: PropsWithChildren<Props>) => {
   const elementRef = useRef<HTMLDivElement | null>(null);
@@ -104,8 +106,8 @@ const LayoutFullscreen = ({
       <Cursor />
       <div className="w-full h-full absolute z-[-1] animate-move-blur">
         <img
-          src={isFullscreen && isLandscape ? "/img/wp1.jpg" : "/gif/krul-tepes.gif"}
-          className="w-full h-full object-cover scale-110"
+          src={isFullscreen && isLandscape ? wallpaper || "/gif/krul-tepes.gif" : "/gif/krul-tepes.gif"}
+          className="w-full h-full object-cover scale-105"
           alt="Background"
         />
       </div>
