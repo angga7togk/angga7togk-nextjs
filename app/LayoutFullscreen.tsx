@@ -104,7 +104,7 @@ const LayoutFullscreen = ({
       <Cursor />
       <div className="w-full h-full absolute z-[-1] animate-move-blur">
         <img
-          src="/img/wp1.jpg"
+          src={isFullscreen && isLandscape ? "/img/wp1.jpg" : "/gif/krul-tepes.gif"}
           className="w-full h-full object-cover scale-110"
           alt="Background"
         />
