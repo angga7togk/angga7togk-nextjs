@@ -33,7 +33,7 @@ const HomeScreen = ({ active, onChangeScreen }: ScreenProps) => {
   };
 
   return (
-    <main className={`w-full h-screen grid grid-cols-2 p-2 lg:p-4 relative z-10 ${active ? 'block' : 'hidden'}`}>
+    <main className={`w-full h-screen grid grid-cols-2 p-2 lg:p-4 relative z-10 animate-scale-up ${active ? 'block' : 'hidden'}`}>
       {/* Left */}
       <div className="h-full w-full grid grid-rows-7">
         <div className="">

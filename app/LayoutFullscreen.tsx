@@ -3,9 +3,16 @@
 "use client";
 import Cursor from "@/components/Cursor";
 import ModalFullscreen from "@/components/ModalFullscreen";
-import { useEffect, useRef, useState } from "react";
+import { PropsWithChildren, useEffect, useRef, useState } from "react";
 
-const LayoutFullscreen = ({ children }: any) => {
+interface Props {
+  onLoadChange: (isLoaded: boolean) => void;
+}
+
+const LayoutFullscreen = ({
+  children,
+  onLoadChange,
+}: PropsWithChildren<Props>) => {
   const elementRef = useRef<HTMLDivElement | null>(null);
   const [isFullscreen, setFullscreen] = useState(false);
   const [isLandscape, setLandscape] = useState(false);
@@ -73,6 +80,8 @@ const LayoutFullscreen = ({ children }: any) => {
       ); /* IE11 */
     };
   }, []);
+
+  if (onLoadChange) onLoadChange(isFullscreen && isLandscape);
 
   return (
     <div

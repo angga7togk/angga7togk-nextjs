@@ -38,13 +38,61 @@ const config: Config = {
             filter: "blur(5px)",
           },
         },
+        scaleUp: {
+          '0%': {
+            transform: 'scale(0)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'scale(1)',
+            opacity: '1',
+          }
+        },
+        leftShow: {
+          '0%': {
+            transform: 'translateX(-1000px)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          }
+        },
+        rightShow: {
+          '0%': {
+            transform: 'translateX(1000px)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          }
+        },
+        leftHide: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-1000px)',
+          }
+        },
+        rightHide: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(1000px)',
+          }
+        },
       },
       animation: {
         "move-left-right": "moveLeftRight 2s ease-in-out infinite",
         "move-blur": "moveAndBlur 15s ease-in-out infinite",
+        'scale-up': 'scaleUp 0.5s ease-in-out forwards',
+        'left-show': 'leftShow 0.5s ease-in-out forwards',
+        'right-show': 'rightShow 0.5s ease-in-out forwards',
+        'left-hide': 'leftHide 0.5s ease-in-out forwards',
+        'right-hide': 'rightHide 0.5s ease-in-out forwards'
       },
     },
   },
   plugins: [],
 };
+
 export default config;
