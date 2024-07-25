@@ -51,7 +51,7 @@ const HomeScreen = ({ active, onChangeScreen }: ScreenProps) => {
             icon={<BsPeople />}
             title="My Profile"
             subtitle="The services I offer to clients and collaborators"
-            onClick={handleProfileClick}
+            // onClick={handleProfileClick}
           />
           <ButtonLeft
             icon={<GrProjects />}
