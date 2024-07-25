@@ -17,8 +17,8 @@ const ProfileCard = () => {
     >
       <img
         src="/img/profile.jpg"
-        className={`size-12 lg:size-20 transition duration-300 rounded-md shadow-custom ${
-          hover ? "shadow-white" : "shadow-red-500"
+        className={`size-12 lg:size-20 transition duration-300 shadow-custom border border-black ${
+          hover ? "shadow-white" : ""
         }`}
       />
       <div>

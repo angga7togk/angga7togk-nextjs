@@ -95,10 +95,10 @@ const HomeScreen = ({ active, onChangeScreen }: ScreenProps) => {
       {/* Right */}
       <div className="h-full w-full grid grid-rows-2">
         <div className="flex flex-col items-end justify-start space-y-4">
-          <div className="w-1/2 h-24 lg:h-32 bg-red-600/50 border border-red-600 rounded-md shadow-md shadow-red-600">
+          <div className="w-1/2 h-24 lg:h-32 bg-red-500/20 border border-red-600/50 ">
             <TimeDate />
           </div>
-          <div className="w-1/2 h-10 lg:h-12 bg-red-600/50 border border-red-600 rounded-md shadow-md shadow-red-600 text-sm lg:text-base font-semibold flex justify-center items-center">
+          <div className="w-1/2 h-10 lg:h-12 bg-red-600/50 border border-red-600  text-sm lg:text-base font-semibold flex justify-center items-center">
             <CustomTypeWriter
               strings={[
                 "Front-End Developer",
@@ -126,7 +126,7 @@ const HomeScreen = ({ active, onChangeScreen }: ScreenProps) => {
         </div>
 
         <div className="flex items-end justify-end space-x-4">
-          <button className="flex items-center w-1/2 bg-gradient-to-r from-gray-200 hover:from-gray-300 to-red-500 hover:to-red-600 h-14 lg:h-20 rounded-md border border-white text-start transition">
+          <button className="flex items-center w-1/2 bg-gradient-to-r from-gray-200 hover:from-gray-300 to-red-500 hover:to-red-600 h-14 lg:h-20  border border-white text-start transition">
             <div
               className={`border-y border-black size-6 lg:size-8 transition duration-300 flex items-center justify-center text-gray-800 text-base lg:text-xl -rotate-45 mx-4`}
             >

@@ -38,7 +38,7 @@ const SplashScreen = ({ active, onChangeScreen }: ScreenProps) => {
         active ? "block" : "hidden"
       }`}
     >
-      <div className="w-full h-24 bg-black/30 absolute bottom-0 left-0 flex flex-col items-center justify-end">
+      <div className="w-full h-24 bg-black/50 absolute bottom-0 left-0 flex flex-col items-center justify-end">
         <CustomTypeWriter strings={['Selamat Datang di Angga7Togk Profile...']} />
         <div
           className="h-0.5 bg-red-500 mb-2"

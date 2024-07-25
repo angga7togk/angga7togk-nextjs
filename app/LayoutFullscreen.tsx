@@ -90,13 +90,28 @@ const LayoutFullscreen = ({
       ref={elementRef}
       className="w-screen h-screen relative overflow-hidden bg-red-500/30"
     >
-      <video
-        src="https://static.moewalls.com/videos/preview/2023/umbrella-kazuha-in-the-rain-genshin-impact-preview.mp4"
-        autoPlay
-        loop
-        muted
-        className="w-full h-full object-cover absolute z-[-1]"
-      />
+      {isFullscreen && isLandscape ? (
+        <video
+          src="https://static.moewalls.com/videos/preview/2023/umbrella-kazuha-in-the-rain-genshin-impact-preview.mp4"
+          autoPlay
+          loop
+          muted
+          className="w-full h-full object-cover absolute z-[-1] "
+        />
+      ) : (
+        <div className="w-full h-full absolute z-[-1] animate-move-blur">
+          <img
+            src={
+              isFullscreen && isLandscape
+                ? wallpaper || "/gif/krul-tepes.gif"
+                : "/gif/krul-tepes.gif"
+            }
+            className="w-full h-full object-cover scale-105"
+            alt="Background"
+          />
+        </div>
+      )}
+
       <ul className="circles">
         <li></li>
         <li></li>
@@ -111,14 +126,7 @@ const LayoutFullscreen = ({
       </ul>
 
       <Cursor />
-      {/* <div className="w-full h-full absolute z-[-1] animate-move-blur">
-        <img
-          src={isFullscreen && isLandscape ? wallpaper || "/gif/krul-tepes.gif" : "/gif/krul-tepes.gif"}
-          className="w-full h-full object-cover scale-105"
-          alt="Background"
-        />
-      </div> */}
-      
+
       {(!isFullscreen || !isLandscape) && (
         <ModalFullscreen toggleFullscreen={toggleFullscreen} />
       )}
