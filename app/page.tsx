@@ -7,6 +7,7 @@ import HomeScreen from "./screens/HomeScreen";
 import SkillScreen from "./screens/skills/SkillScreen";
 import SplashScreen from "./screens/SplashScreen";
 import ProjectScreen from "./screens/projects/ProjectScreen";
+import ServiceScreen from "./screens/services/ServiceScreen";
 
 const Home: React.FC = () => {
   const [screen, setScreen] = useState("splash");
@@ -41,6 +42,13 @@ const Home: React.FC = () => {
           />
           <ProjectScreen
             active={screen == "projects"}
+            onChangeScreen={(s) => {
+              setScreen(s);
+            }}
+          />
+
+          <ServiceScreen
+            active={screen == "services"}
             onChangeScreen={(s) => {
               setScreen(s);
             }}

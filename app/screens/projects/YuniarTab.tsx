@@ -2,7 +2,7 @@
 import React from "react";
 import { TabProps } from "../constants";
 
-const AnimakuTab: React.FC<TabProps> = ({ active, onChangeTab }) => {
+const YuniarTab: React.FC<TabProps> = ({ active, onChangeTab }) => {
   return (
     <main
       className={`w-full h-[75dvh] ${
@@ -37,4 +37,4 @@ const AnimakuTab: React.FC<TabProps> = ({ active, onChangeTab }) => {
   );
 };
 
-export default AnimakuTab;
+export default YuniarTab;

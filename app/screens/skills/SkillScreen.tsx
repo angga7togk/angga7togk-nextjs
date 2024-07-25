@@ -23,7 +23,7 @@ const SkillScreen = ({ active, onChangeScreen }: ScreenProps) => {
       }}
     >
       <div className="w-full grid grid-cols-4 gap-3 row-start-2 row-end-8 overflow-hidden">
-        <div className="w-full bg-red-500/10 border border-red-500/50 py-2">
+        <div className="w-full bg-black/50 border border-black py-2">
           <h1 className="text-md lg:text-xl font-semibold text-center mb-4">
             My Skills
           </h1>
@@ -54,7 +54,7 @@ const SkillScreen = ({ active, onChangeScreen }: ScreenProps) => {
             />
           </div>
         </div>
-        <div className=" w-full col-start-2 col-end-5 bg-red-500/10 border border-red-500/50 p-4">
+        <div className=" w-full col-start-2 col-end-5 bg-black/50 border border-black p-4">
           <FrameworkTab active={tab == "frameworks"} />
           <LanguageTab active={tab == "languages"} />
           <SoftwareTab active={tab == "softwares"} />
