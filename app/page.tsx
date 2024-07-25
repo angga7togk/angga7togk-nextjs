@@ -4,8 +4,9 @@
 import React, { useState } from "react";
 import LayoutFullscreen from "./LayoutFullscreen";
 import HomeScreen from "./screens/HomeScreen";
-import ProfileScreen from "./screens/ProfileScreen";
+import SkillScreen from "./screens/skills/SkillScreen";
 import SplashScreen from "./screens/SplashScreen";
+import ProjectScreen from "./screens/projects/ProjectScreen";
 
 const Home: React.FC = () => {
   const [screen, setScreen] = useState("splash");
@@ -13,7 +14,7 @@ const Home: React.FC = () => {
 
   return (
     <LayoutFullscreen
-      wallpaper={screen == "splash" ? '/gif/krul-tepes.gif' : "/img/wp1.jpg"}
+      wallpaper={screen == "splash" ? "/gif/krul-tepes.gif" : "/img/wp1.jpg"}
       onLoadChange={(status) => {
         setLoaded(status);
       }}
@@ -32,8 +33,14 @@ const Home: React.FC = () => {
               setScreen(s);
             }}
           />
-          <ProfileScreen
-            active={screen == "profile"}
+          <SkillScreen
+            active={screen == "skills"}
+            onChangeScreen={(s) => {
+              setScreen(s);
+            }}
+          />
+          <ProjectScreen
+            active={screen == "projects"}
             onChangeScreen={(s) => {
               setScreen(s);
             }}

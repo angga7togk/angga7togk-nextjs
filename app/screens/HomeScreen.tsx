@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ButtonLeft from "@/components/ButtonLeft";
 import { GrProjects, GrServices, GrTools } from "react-icons/gr";
@@ -6,34 +7,40 @@ import ButtonBottom from "@/components/ButtonBottom";
 import { BsPeople } from "react-icons/bs";
 import { GiSwordClash } from "react-icons/gi";
 import { ScreenProps } from "./constants";
+import TimeDate from "@/components/TimeDate";
+import CustomTypeWriter from "@/components/CustomTypeWriter";
 
 const HomeScreen = ({ active, onChangeScreen }: ScreenProps) => {
   const handleProfileClick = () => {
     if (onChangeScreen) {
-      onChangeScreen('profile');
+      onChangeScreen("profile");
     }
   };
 
   const handleProjectsClick = () => {
     if (onChangeScreen) {
-      onChangeScreen('projects');
+      onChangeScreen("projects");
     }
   };
 
   const handleSkillsClick = () => {
     if (onChangeScreen) {
-      onChangeScreen('skills');
+      onChangeScreen("skills");
     }
   };
 
   const handleServicesClick = () => {
     if (onChangeScreen) {
-      onChangeScreen('services');
+      onChangeScreen("services");
     }
   };
 
   return (
-    <main className={`w-full h-screen grid grid-cols-2 p-2 lg:p-4 relative z-10 animate-scale-up ${active ? 'block' : 'hidden'}`}>
+    <main
+      className={`w-full h-screen grid grid-cols-2 p-2 lg:p-4 relative z-10 animate-scale-up ${
+        active ? "block" : "hidden"
+      }`}
+    >
       {/* Left */}
       <div className="h-full w-full grid grid-rows-7">
         <div className="">
@@ -71,17 +78,51 @@ const HomeScreen = ({ active, onChangeScreen }: ScreenProps) => {
             @7TogkID 2024
           </ButtonBottom>
           <ButtonBottom disable>
-            Reference <br />
+            Credit <br />
             @NekoUI 2024
           </ButtonBottom>
-          <ButtonBottom>FEEDBACK</ButtonBottom>
+          <ButtonBottom
+            onClick={() => {
+              window.location.href =
+                "https://github.com/angga7togk/angga7togk-nextjs";
+            }}
+          >
+            SOURCE CODE
+          </ButtonBottom>
         </div>
       </div>
 
       {/* Right */}
       <div className="h-full w-full grid grid-rows-2">
         <div className="flex flex-col items-end justify-start space-y-4">
-          <div className="w-1/2 h-24 lg:h-32 bg-red-500/50 border border-red-500 rounded-md"></div>
+          <div className="w-1/2 h-24 lg:h-32 bg-red-600/50 border border-red-600 rounded-md shadow-md shadow-red-600">
+            <TimeDate />
+          </div>
+          <div className="w-1/2 h-10 lg:h-12 bg-red-600/50 border border-red-600 rounded-md shadow-md shadow-red-600 text-sm lg:text-base font-semibold flex justify-center items-center">
+            <CustomTypeWriter
+              strings={[
+                "Front-End Developer",
+                "Back-End Developer",
+                "NextJS",
+                "ReactJS",
+                "AstroJS",
+                "NodeJS",
+                "ExpressJS",
+                "Vercel",
+                "TailwindCSS",
+                "Bootstrap",
+                "Laravel",
+                "JavaScript",
+                "TypeScript",
+                "SQL and MYSQL",
+                "PHP Language",
+                "Java Language",
+                "Kotlin Language",
+                "Maven and Gradle",
+                "Python Language",
+              ]}
+            />
+          </div>
         </div>
 
         <div className="flex items-end justify-end space-x-4">

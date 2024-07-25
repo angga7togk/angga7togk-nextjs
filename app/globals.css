@@ -16,6 +16,30 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+/* For Webkit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Dark track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5a5a5a; /* Darker thumb background */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid #2e2e2e; /* Adds space around thumb */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5a5a5a #2e2e2e;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
