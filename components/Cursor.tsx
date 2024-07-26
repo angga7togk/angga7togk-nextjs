@@ -41,10 +41,10 @@ const Cursor = () => {
     <div
       style={{
         position: 'fixed',
-        left: position.x, // Use the smooth cursor position
-        top: position.y,  // Use the smooth cursor position
-        transform: 'translate(-50%, -50%)', // Center the cursor
-        transition: 'transform 0.1s ease-out', // Smooth transition
+        left: position.x, 
+        top: position.y, 
+        transform: 'translate(-50%, -50%)',
+        transition: 'transform 0.1s ease-out',
       }}
       className='size-10 border-2 border-red-500 rounded-full z-[100] justify-center items-center pointer-events-none hidden lg:flex'
     >
